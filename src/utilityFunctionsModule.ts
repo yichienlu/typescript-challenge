@@ -7,8 +7,9 @@
  * @param date - 一個日期物件
  * @returns - 回傳一個字串，表示格式化後的日期
  */
-export function formatDate(date: Date): string {
+export function formatDate(date: Date):string {
     // 請在此處寫下你的程式碼
+    return `${date.getFullYear()}-${String(date.getMonth() +1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`
 }
 
 /**
@@ -22,4 +23,5 @@ export function formatDate(date: Date): string {
  */
 export function roundNumber(num: number): number {
     // 請在此處寫下你的程式碼
+    return Math.round(num)
 }

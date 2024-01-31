@@ -12,4 +12,7 @@
  */
 export function classifyAge(age: number): string {
     // 請在此處寫下你的程式碼
+    return age<=10 ? "Child" : 
+           age<=15 ? "Teenager" : 
+           age<=30 ? "Adult" : "Senior"
 }

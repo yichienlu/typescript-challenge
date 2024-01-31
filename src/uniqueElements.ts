@@ -5,5 +5,21 @@
  * @returns - 回傳包含所有唯一元素的新陣列
  */
 export function uniqueElements(array: number[]): number[] {
-    // 請在此處寫下你的程式碼
+    let obj:{[key:number]:number} = {}
+    array.forEach(item=>{
+        if(!obj[item]){
+            obj[item] = 1
+        } else {
+            obj[item] += 1
+        }
+    })
+    return Object.keys(obj).map(item=>Number(item))
 }
+
+        // 使用 Set 來存放唯一的元素
+        // const uniqueSet = new Set(array);
+
+        // 將 Set 轉換成陣列
+        // const uniqueArray = Array.from(uniqueSet);
+    
+        // return uniqueArray;
